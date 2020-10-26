@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ejercicio7ut3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <DockPanel LastChildFill="True" Margin="5">
-        <TextBlock DockPanel.Dock="Top" 
+        Title="MainWindow"
+        Height="450"
+        Width="800"
+        MinWidth="700"
+        MinHeight="300"
+        Icon="form.ico">
+    <DockPanel LastChildFill="True"
+               Margin="5">
+        <TextBlock DockPanel.Dock="Top"
                    Text="FORMULARIO"
                    TextAlignment="Center"
                    FontSize="30" />
@@ -15,14 +21,17 @@
                    DockPanel.Dock="Bottom">
             <TextBlock DockPanel.Dock="Left"
                        Text="Alejandro Ortiz"
-                       FontSize="15" />
+                       FontSize="20"
+                       VerticalAlignment="Center"
+                       FontFamily="Ink Free"
+                       FontWeight="Bold" />
             <StackPanel Orientation="Horizontal"
                         Margin="5"
                         DockPanel.Dock="Right"
                         Height="30">
-                <Button Content="Aceptar" 
+                <Button Content="Aceptar"
                         Margin="5"
-                        Width="80"/>
+                        Width="80" />
                 <Button Content="Cancelar"
                         Margin="5"
                         Width="80" />
@@ -30,6 +39,103 @@
             <TextBlock />
 
         </DockPanel>
+        
+        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <Border BorderBrush="Black"
+                    BorderThickness="3"
+                    CornerRadius="3"
+                    Margin="5">
+                    <Border.Effect>
+                        <DropShadowEffect />
+                    </Border.Effect>
+                    <StackPanel Orientation="Vertical"
+                            Background="LightBlue">
+                    <DockPanel LastChildFill="True"
+                               Height="20"
+                               Margin="5"
+                               MinWidth="525">
+                        <TextBlock DockPanel.Dock="Left"
+                                   Text="Nombre"
+                                   Width="75"
+                                   VerticalAlignment="Center" />
+                        <Image DockPanel.Dock="Right"
+                               Source="info.png"
+                               Height="20"
+                               ToolTip="Máximo 100 caracteres" />
+                        <TextBox />
+                    </DockPanel>
+                    <DockPanel LastChildFill="True"
+                               Height="20"
+                               Margin="5"
+                               MinWidth="525">
+                        <TextBlock DockPanel.Dock="Left"
+                                   Text="Edad"
+                                   Width="75"
+                                   VerticalAlignment="Center" />
+                        <Image DockPanel.Dock="Right"
+                               Source="info.png"
+                               Height="20"
+                               ToolTip="Número entero entre 0 y 100" />
+                        <TextBox />
+                    </DockPanel>
+                    <DockPanel LastChildFill="True"
+                               Height="20"
+                               Margin="5"
+                               MinWidth="525">
+                        <TextBlock DockPanel.Dock="Left"
+                                   Text="Dirección"
+                                   Width="75"
+                                   VerticalAlignment="Center" />
+                        <Image DockPanel.Dock="Right"
+                               Source="info.png"
+                               Height="20"
+                               ToolTip="Incluir tambien codigo postal" />
+                        <TextBox />
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="Black"
+                    BorderThickness="3"
+                    CornerRadius="3"
+                    Margin="5">
+                    <Border.Effect>
+                        <DropShadowEffect />
+                    </Border.Effect>
+                    <StackPanel Orientation="Horizontal"
+                            Background="Orange">
+                    <GroupBox Header="Aficiones"
+                              Margin="5"
+                              Width="200">
+                        <StackPanel Orientation="Vertical"
+                                    Margin="5">
+                            <CheckBox Margin="2">Hacer deporte</CheckBox>
+                            <CheckBox Margin="2">Viajar</CheckBox>
+                            <CheckBox Margin="2">Ver series</CheckBox>
+                            <CheckBox Margin="2">Leer comics</CheckBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Estado civil"
+                              Margin="5"
+                              Width="200">
+                        <StackPanel Orientation="Vertical"
+                                    Margin="5">
+                            <RadioButton Margin="2"
+                                         IsChecked="True">Soltero</RadioButton>
+                            <RadioButton Margin="2">Casado</RadioButton>
+                            <RadioButton Margin="2">Divorciado</RadioButton>
+                            <RadioButton Margin="2">Viudo</RadioButton>
+                        </StackPanel>
+                    </GroupBox>
 
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+            
+            <Image Source="foto.jpg"
+                   Margin="5" 
+                   />
+        </StackPanel>
     </DockPanel>
 </Window>
