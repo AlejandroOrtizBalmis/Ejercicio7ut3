@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ejercicio7ut3"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Formulario"
         Height="450"
         Width="800"
         MinWidth="700"
@@ -17,7 +17,7 @@
                    Text="FORMULARIO"
                    TextAlignment="Center"
                    FontSize="30" />
-        <DockPanel LastChildFill="True"
+        <DockPanel LastChildFill="False"
                    DockPanel.Dock="Bottom">
             <TextBlock DockPanel.Dock="Left"
                        Text="Alejandro Ortiz"
@@ -36,12 +36,15 @@
                         Margin="5"
                         Width="80" />
             </StackPanel>
-            <TextBlock />
-
         </DockPanel>
         
-        <StackPanel Orientation="Horizontal">
-        <StackPanel Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0">
             <Border BorderBrush="Black"
                     BorderThickness="3"
                     CornerRadius="3"
@@ -87,11 +90,13 @@
                                    Text="Dirección"
                                    Width="75"
                                    VerticalAlignment="Center" />
+                            
                         <Image DockPanel.Dock="Right"
                                Source="info.png"
                                Height="20"
                                ToolTip="Incluir tambien codigo postal" />
-                        <TextBox />
+                            
+                            <TextBox />
                     </DockPanel>
                 </StackPanel>
             </Border>
@@ -135,7 +140,8 @@
             
             <Image Source="foto.jpg"
                    Margin="5" 
+                   Grid.Column="2"
                    />
-        </StackPanel>
+        </Grid>
     </DockPanel>
 </Window>
