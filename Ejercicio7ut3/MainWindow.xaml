@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Formulario"
         Height="450"
-        Width="800"
-        MinWidth="700"
-        MinHeight="300"
+        Width="900"
+        MinWidth="900"
+        MinHeight="500"
         Icon="form.ico">
     <DockPanel LastChildFill="True"
                Margin="5">
@@ -43,105 +43,103 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Vertical"
-                    Grid.Column="0">
-            <Border BorderBrush="Black"
-                    BorderThickness="3"
-                    CornerRadius="3"
-                    Margin="5">
+            <StackPanel Orientation="Vertical"
+                        Grid.Column="0">
+                <Border BorderBrush="Black"
+                        BorderThickness="3"
+                        CornerRadius="3"
+                        Margin="5">
                     <Border.Effect>
                         <DropShadowEffect />
                     </Border.Effect>
                     <StackPanel Orientation="Vertical"
-                            Background="LightBlue">
-                    <DockPanel LastChildFill="True"
-                               Height="20"
-                               Margin="5"
-                               MinWidth="525">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Text="Nombre"
-                                   Width="75"
-                                   VerticalAlignment="Center" />
-                        <Image DockPanel.Dock="Right"
-                               Source="info.png"
-                               Height="20"
-                               ToolTip="Máximo 100 caracteres" />
-                        <TextBox />
-                    </DockPanel>
-                    <DockPanel LastChildFill="True"
-                               Height="20"
-                               Margin="5"
-                               MinWidth="525">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Text="Edad"
-                                   Width="75"
-                                   VerticalAlignment="Center" />
-                        <Image DockPanel.Dock="Right"
-                               Source="info.png"
-                               Height="20"
-                               ToolTip="Número entero entre 0 y 100" />
-                        <TextBox />
-                    </DockPanel>
-                    <DockPanel LastChildFill="True"
-                               Height="20"
-                               Margin="5"
-                               MinWidth="525">
-                        <TextBlock DockPanel.Dock="Left"
-                                   Text="Dirección"
-                                   Width="75"
-                                   VerticalAlignment="Center" />
-                            
-                        <Image DockPanel.Dock="Right"
-                               Source="info.png"
-                               Height="20"
-                               ToolTip="Incluir tambien codigo postal" />
-                            
+                                Background="LightBlue">
+                        <DockPanel LastChildFill="True"
+                                   Height="20"
+                                   Margin="5"
+                                   MinWidth="525">
+                            <TextBlock DockPanel.Dock="Left"
+                                       Text="Nombre"
+                                       Width="75"
+                                       VerticalAlignment="Center" />
+                            <Image DockPanel.Dock="Right"
+                                   Source="info.png"
+                                   Height="20"
+                                   ToolTip="Máximo 100 caracteres" />
                             <TextBox />
-                    </DockPanel>
-                </StackPanel>
-            </Border>
-            <Border BorderBrush="Black"
-                    BorderThickness="3"
-                    CornerRadius="3"
-                    Margin="5">
+                        </DockPanel>
+                        <DockPanel LastChildFill="True"
+                                   Height="20"
+                                   Margin="5"
+                                   MinWidth="525">
+                            <TextBlock DockPanel.Dock="Left"
+                                       Text="Edad"
+                                       Width="75"
+                                       VerticalAlignment="Center" />
+                            <Image DockPanel.Dock="Right"
+                                   Source="info.png"
+                                   Height="20"
+                                   ToolTip="Número entero entre 0 y 100" />
+                            <TextBox />
+                        </DockPanel>
+                        <DockPanel LastChildFill="True"
+                                   Height="20"
+                                   Margin="5"
+                                   MinWidth="525">
+                            <TextBlock DockPanel.Dock="Left"
+                                       Text="Dirección"
+                                       Width="75"
+                                       VerticalAlignment="Center" />
+
+                            <Image DockPanel.Dock="Right"
+                                   Source="info.png"
+                                   Height="20"
+                                   ToolTip="Incluir tambien codigo postal" />
+
+                            <TextBox />
+                        </DockPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black"
+                        BorderThickness="3"
+                        CornerRadius="3"
+                        Margin="5">
                     <Border.Effect>
                         <DropShadowEffect />
                     </Border.Effect>
                     <StackPanel Orientation="Horizontal"
-                            Background="Orange">
-                    <GroupBox Header="Aficiones"
-                              Margin="5"
-                              Width="200">
-                        <StackPanel Orientation="Vertical"
-                                    Margin="5">
-                            <CheckBox Margin="2">Hacer deporte</CheckBox>
-                            <CheckBox Margin="2">Viajar</CheckBox>
-                            <CheckBox Margin="2">Ver series</CheckBox>
-                            <CheckBox Margin="2">Leer comics</CheckBox>
-                        </StackPanel>
-                    </GroupBox>
-                    <GroupBox Header="Estado civil"
-                              Margin="5"
-                              Width="200">
-                        <StackPanel Orientation="Vertical"
-                                    Margin="5">
-                            <RadioButton Margin="2"
-                                         IsChecked="True">Soltero</RadioButton>
-                            <RadioButton Margin="2">Casado</RadioButton>
-                            <RadioButton Margin="2">Divorciado</RadioButton>
-                            <RadioButton Margin="2">Viudo</RadioButton>
-                        </StackPanel>
-                    </GroupBox>
+                                Background="Orange">
+                        <GroupBox Header="Aficiones"
+                                  Margin="5"
+                                  Width="200">
+                            <StackPanel Orientation="Vertical"
+                                        Margin="5">
+                                <CheckBox>Hacer deporte</CheckBox>
+                                <CheckBox>Viajar</CheckBox>
+                                <CheckBox>Ver series</CheckBox>
+                                <CheckBox>Leer comics</CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Estado civil"
+                                  Margin="5"
+                                  Width="200">
+                            <StackPanel Orientation="Vertical"
+                                        Margin="5">
+                                <RadioButton IsChecked="True">Soltero</RadioButton>
+                                <RadioButton >Casado</RadioButton>
+                                <RadioButton >Divorciado</RadioButton>
+                                <RadioButton >Viudo</RadioButton>
+                            </StackPanel>
+                        </GroupBox>
 
 
-                </StackPanel>
-            </Border>
-        </StackPanel>
-            
+                    </StackPanel>
+                </Border>
+            </StackPanel>
             <Image Source="foto.jpg"
-                   Margin="5" 
-                   Grid.Column="2"
-                   />
+                   Grid.Column="2" 
+                   Stretch="Fill"
+                   Margin="5"/>
         </Grid>
     </DockPanel>
 </Window>
